@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
+body {
+  background-color: #e9ece6;
+  /* background: linear-gradient(rgba(85, 100, 85, 0.281), rgba(2, 21, 83, 0.185)); */
+  font-family: stolzl, sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
+  /* color: #f7f7f7; */
+}
+a:hover {
+  color: rgb(1, 44, 1) !important;
+}
+.accordion-button::after{
+  color: white !important;
+}
+.collapsed{
+  color: white !important;
+}
+.accordion-button:not(.collapsed) {
+  color: white !important;
+}
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+  color: white !important;
+}
+@media (min-width: 768px) {
+  .navigation {
+    position: fixed;
+    letter-spacing: 1.2;
+    border-radius: 16px;
+    width: 65%;
+    margin-left: 0.5em;
+  }
+} 
+.img-shadow {
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.411));
+}
+.navigation {
+  filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.521));
+  z-index: 3;
+  /* background-color: #116530; */
+
+  /* background: -webkit-linear-gradient(
+    left,
+    rgba(44, 170, 33, 0.863),
+    #233f01
+  ); /* For Safari 5.1 to 6.0 */
+  /* background: linear-gradient(
+    to right,
+    #119f01ad,
+    #197901,
+    #119f01ad
+  );  */
+  /* For Opera 11.1 to 12.0 */
+  /* background: linear-gradient(to left, #000, #ed1c24);
+  background: linear-gradient(to right, #000, #ed1c24); */
+}
+/* .logo {
+  padding-left: 2em;
+} */
+/* .navigation {
+  position-f;
+} */
+
+.heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 3.5vw;
+}
+
+@media (max-width: 767px) {
+  .carousel-inner .carousel-item > div {
+      display: none;
+  }
+  .carousel-inner .carousel-item > div:first-child {
+      display: block;
+  }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+  
+  .carousel-inner .carousel-item-end.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(25%);
+  }
+  
+  .carousel-inner .carousel-item-start.active, 
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-25%);
+  }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+transform: translateX(0);
+}
+/*  Assigning properties to inner
+  content of card  */
+.card__inner {
+  background-color: #198754;
+  color: #fff;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+  opacity: 0;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  transition: all 0.4s ease 0s;
+}
+
+/*  On hovering card opacity
+  of content must be 1*/
+.card:hover .card__inner {
+  opacity: 0.9;
+}
+.card__inner p {
+  overflow-y: scroll;
+  height: 87%;
+  padding-right: 1rem;
+  font-weight: 200;
+}
